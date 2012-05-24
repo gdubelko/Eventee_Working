@@ -33,28 +33,36 @@
                     android1:layout_width="match_parent"
                     android1:layout_height="match_parent"
                     android1:baselineAligned="false" >
+					
+                    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+					    android:id="@+id/beamString"
+					    android:layout_width="fill_parent"
+					    android:layout_height="wrap_content"
+					    android:padding="10dp"
+					    android:textSize="18sp"
+					    />
 
-
-
-                    <Button
-                        android1:id="@+id/Button_Exchange"
-                        style="@style/Button_Style"
-                        android1:layout_width="0dip"
-                        android1:layout_height="144dp"
-                        android1:layout_gravity="center"
-                        android1:layout_margin="25dp"
-                        android1:layout_weight="0.40"
-                        android1:background="@drawable/button_color"
-                        android1:text="@string/exchange" />
-                    
                 </LinearLayout>
                 <!-- TAB2: Contacts********************************************************** -->
-                <ExpandableListView
-            		android:id="@+id/Contacts"
-            		android:layout_width="match_parent"
-            		android:layout_height="wrap_content"
-           			android:layout_weight="1" >
-        		</ExpandableListView>
+                <LinearLayout 
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+					android:orientation="vertical"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:id="@+id/Output_Contacts" >
+                    
+					<ListView
+					    android:id="@+id/android:list"
+					    android:layout_width="fill_parent"
+					    android:layout_height="fill_parent"
+					    />
+					<TextView
+					    android:id="@+id/android:empty"
+					    android:layout_width="fill_parent"
+					    android:layout_height="fill_parent"
+					    android:text="@string/main_no_items"/>
+					
+				</LinearLayout>
 				<!-- TAB3: Me***************************************************************** -->
                 <GridLayout 
                     xmlns:android="http://schemas.android.com/apk/res/android"
