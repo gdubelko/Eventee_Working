@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TabHost
+        android1:id="@+id/tabhost"
+        android1:layout_width="0dip"
+        android1:layout_height="match_parent"
+        android1:layout_weight="1" >
+
+        <LinearLayout
+            android1:layout_width="match_parent"
+            android1:layout_height="match_parent"
+            android1:orientation="vertical" >
+
+            <TabWidget
+                android1:id="@android:id/tabs"
+                android1:layout_width="match_parent"
+                android1:layout_height="wrap_content"
+                android:background="@drawable/button_color" >
+            </TabWidget>
+
+            <FrameLayout
+                android1:id="@android:id/tabcontent"
+                android1:layout_width="match_parent"
+                android1:layout_height="match_parent"
+                android:background="@drawable/background" >
+
+                <!-- TAB1: Exchange********************************************************** -->
+
+                <GridLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/Exchange"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:columnCount="6" >
+
+                    <TextView
+                        android:id="@+id/Text_IncData"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_columnSpan="2"
+                        android:layout_row="1"
+                        android:text="@string/incData"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/beamString"
+                        android:layout_column="1"
+                        android:layout_columnSpan="2"
+                        android:layout_row="3"
+                        android:text="@string/noData" />
+
+                    <Space
+                        android:layout_width="1dp"
+                        android:layout_height="21dp"
+                        android:layout_column="0"
+                        android:layout_row="0" />
+
+                    <Space
+                        android:layout_width="1dp"
+                        android:layout_height="10dp"
+                        android:layout_column="0"
+                        android:layout_row="2" />
+
+                    <Space
+                        android:layout_width="1dp"
+                        android:layout_height="222dp"
+                        android:layout_column="0"
+                        android:layout_row="3" />
+
+                    <Button
+                        android:id="@+id/Button_SaveThem"
+                        style="@style/Button_Style"
+                        android:layout_width="240dp"
+                        android:layout_column="0"
+                        android:layout_columnSpan="6"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_row="4"
+                        android:background="@drawable/button_color"
+                        android:text="@string/button_save_e" />
+
+                    <Space
+                        android:layout_width="1dp"
+                        android:layout_height="138dp"
+                        android:layout_column="0"
+                        android:layout_gravity="fill_horizontal"
+                        android:layout_row="4" />
+
+                    <Space
+                        android:layout_width="205dp"
+                        android:layout_height="1dp"
+                        android:layout_column="2"
+                        android:layout_row="0" />
+
+                    <Space
+                        android:layout_width="21dp"
+                        android:layout_height="1dp"
+                        android:layout_column="0"
+                        android:layout_row="0" />
+                </GridLayout>
+
+                <!-- TAB2: Contacts********************************************************** -->
+                <LinearLayout 
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+					android:orientation="vertical"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:id="@+id/Output_Contacts" >
+                    
+					<ListView
+					    android:id="@+id/android:list"
+					    android:layout_width="fill_parent"
+					    android:layout_height="fill_parent"
+					    />
+					<TextView
+					    android:id="@+id/android:empty"
+					    android:layout_width="fill_parent"
+					    android:layout_height="fill_parent"
+					    android:text="@string/main_no_items"/>
+					
+				</LinearLayout>
+				<!-- TAB3: Me***************************************************************** -->
+                <GridLayout 
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+    				android1:id="@+id/Me"
+    				android:layout_width="match_parent"
+    				android:layout_height="match_parent"
+    				android:columnCount="4" >
+
+				    <TextView
+				        android:id="@+id/Text_Name"
+				        style="@style/Blue_Font"
+				        android:layout_width="wrap_content"
+				        android:layout_column="0"
+				        android:layout_gravity="left"
+				        android:layout_row="0"
+				        android:text="@string/name" />
+	
+				    <EditText
+				        android:id="@+id/Input_Name"
+				        android:layout_width="match_parent"
+				        android:layout_column="0"
+				        android:layout_columnSpan="2"
+				        android:layout_row="1"
+				        android:layout_rowSpan="2"
+				        android:ems="10"
+				        android:freezesText="true"
+				        android:inputType="textPersonName" />
+				
+				    <TextView
+				        android:id="@+id/Text_Network"
+				        style="@style/Blue_Font"
+				        android:layout_column="0"
+				        android:layout_columnSpan="2"
+				        android:layout_gravity="right"
+				        android:layout_row="3"
+				        android:text="@string/network" />
+				
+				    <EditText
+				        android:id="@+id/Input_Network"
+				        android:layout_width="match_parent"
+				        android:layout_column="0"
+				        android:layout_columnSpan="2"
+				        android:layout_row="4"
+				        android:layout_rowSpan="3"
+				        android:ems="10"
+				        android:freezesText="true"
+				        android:inputType="text" />
+				
+				    <TextView
+				        android:id="@+id/Text_Email"
+				        style="@style/Blue_Font"
+				        android:layout_column="0"
+				        android:layout_row="7"
+				        android:text="@string/email" />
+				
+				    <EditText
+				        android:id="@+id/Input_Email"
+				        android:layout_width="match_parent"
+				        android:layout_column="0"
+				        android:layout_columnSpan="2"
+				        android:layout_row="8"
+				        android:ems="10"
+				        android:freezesText="true"
+				        android:inputType="textEmailAddress" />
+				
+				    <Space
+				        android:layout_width="1dp"
+				        android:layout_height="21dp"
+				        android:layout_column="0"
+				        android:layout_row="0" />
+				
+				    <Space
+				        android:layout_width="1dp"
+				        android:layout_height="25dp"
+				        android:layout_column="0"
+				        android:layout_row="1" />
+				
+				    <Space
+				        android:layout_width="117dp"
+				        android:layout_height="1dp"
+				        android:layout_column="0"
+				        android:layout_gravity="fill_horizontal"
+				        android:layout_row="0" />
+				
+				    <Space
+				        android:layout_width="1dp"
+				        android:layout_height="10dp"
+				        android:layout_column="0"
+				        android:layout_gravity="fill_horizontal"
+				        android:layout_row="8" />
+				
+				    <TextView
+				        android:id="@+id/Text_PhoneNumber"
+				        style="@style/Blue_Font"
+				        android:layout_column="0"
+				        android:layout_gravity="left"
+				        android:layout_row="9"
+				        android:text="@string/phone" />
+				
+				    <EditText
+				        android:id="@+id/Input_PhoneNumber"
+				        android:layout_column="0"
+				        android:layout_columnSpan="2"
+				        android:layout_gravity="fill_horizontal"
+				        android:layout_row="10"
+				        android:ems="10"
+				        android:freezesText="true"
+				        android:inputType="phone" />
+				
+				    <Space
+				        android:layout_width="1dp"
+				        android:layout_height="19dp"
+				        android:layout_column="0"
+				        android:layout_row="12" />
+				
+				    <Button
+				        android:id="@+id/Button_SaveMe"
+				        style="@style/Button_Style"
+				        android:layout_width="96dp"
+				        android:layout_column="0"
+				        android:layout_columnSpan="4"
+				        android:layout_gravity="center_horizontal"
+				        android:layout_row="13"
+				        android1:background="@drawable/button_color"
+				        android:text="@string/save" />
+				
+				    <Space
+				        android:layout_width="1dp"
+				        android:layout_height="139dp"
+				        android:layout_column="0"
+				        android:layout_row="13" />
+				
+				    <Space
+				        android:layout_width="1dp"
+				        android:layout_height="10dp"
+				        android:layout_column="0"
+				        android:layout_row="4" />
+				
+				    <Space
+				        android:layout_width="1dp"
+				        android:layout_height="10dp"
+				        android:layout_column="0"
+				        android:layout_row="11" />
+			
+				</GridLayout>    
+            </FrameLayout>
+        </LinearLayout>
+	</TabHost>
+</LinearLayout>
